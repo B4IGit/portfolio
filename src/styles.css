@@ -17,12 +17,24 @@
   --bg-dark: linear-gradient(var(--bg), var(--black));
 }
 
+@theme code {
+  --const: #fa02d7;
+  --string: #fad404;
+  --skill: #c6f802;
+  --boolean: #f86109;
+  --symbol: var(--tertiary);
+}
+
 /* Reset default styles */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: var(--text);
+}
+
+pre:has(code) {
+  white-space: pre-line;
 }
 
 /* Navbar */
