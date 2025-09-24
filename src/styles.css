@@ -2,11 +2,19 @@
 
 /* Define colors */
 @theme {
-  --bg: #313743;
+  --bg: #1F1F1F;
   --text: #f9fdf9;
   --primary: #c68dfe;
   --secondary: #cbe957;
   --tertiary: #96c1d4;
+  --black: #141414;
+  --border-gradient: linear-gradient(
+    to right,
+    var(--secondary),
+    var(--primary),
+    var(--tertiary)
+  );
+  --bg-dark: linear-gradient(var(--bg), var(--black));
 }
 
 /* Reset default styles */
@@ -14,13 +22,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--bg);
   color: var(--text);
-}
-
-pre {
-  tab-size: 2;
-  white-space: pre-wrap;
 }
 
 /* Navbar */
