@@ -14,7 +14,7 @@ import { BackgroundP5Component } from './grid-trail-background/grid-trail-backgr
       <header></header>
 
       <main class="w-4/5 mx-auto">
-        <nav class="flex justify-between bg-[var(--bg)]">
+        <nav class="flex justify-between h-20 items-center bg-[var(--bg)]">
           <!-- Logo -->
           <div class="nav-logo uppercase text-2xl font-semibold p-2 list-none">
             <li><a routerLink="/">Devin Ledesma</a></li>
