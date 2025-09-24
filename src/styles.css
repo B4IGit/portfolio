@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+/* Define colors */
+@theme {
+  --bg: #313743;
+  --text: #f9fdf9;
+  --primary: #c68dfe;
+  --secondary: #cbe957;
+  --tertiary: #96c1d4;
+}
+
+/* Reset default styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+pre {
+  tab-size: 2;
+  white-space: pre-wrap;
+}
+
+/* Navbar */
+.nav-logo {
+  color: var(--secondary)
+}
+
+/* Hero */
+.code-container {
+  border-color: var(--tertiary);
+}
+
+
