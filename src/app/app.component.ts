@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { BackgroundP5Component } from './grid-trail-background/grid-trail-background.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, BackgroundP5Component],
   template: `
-    <div class="container mx-auto">
+    <div class="container mx-auto fixed inset-0 z-[-2] bg-[var(--bg)]">
+      <!-- p5 canvas (z -1) -->
+      <app-grid-trail-background></app-grid-trail-background>
+
       <header></header>
 
-      <main class="w-4/5 mx-auto border-2 border-solid-black">
-        <nav class="flex justify-between border-2 border-red-700">
+      <main class="w-4/5 mx-auto">
+        <nav class="flex justify-between bg-[var(--bg)]">
           <!-- Logo -->
           <div class="nav-logo uppercase text-2xl font-semibold p-2 list-none">
             <li><a routerLink="/">Devin Ledesma</a></li>
@@ -28,7 +32,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
           <router-outlet />
         </section>
 
-        <footer class="flex flex-col items-center">
+        <footer class="flex flex-col items-center bg-[var(--bg)]">
           <nav class="flex gap-6">
             <a routerLink="/">Home</a>
             <a routerLink="#">About</a>
