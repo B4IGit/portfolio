@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
         </div>
         <!-- Social links -->
         <div class="flex items-center gap-6 mt-10">
-          <a href="https://github.com/b4igit">
+          <a href="https://github.com/b4igit" target="_blank">
             <svg
               class="w-12 h-12 fill-current"
               role="img"
@@ -32,7 +32,10 @@ import { Component } from '@angular/core';
               />
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/devin-f-ledesma/">
+          <a
+            href="https://www.linkedin.com/in/devin-f-ledesma/"
+            target="_blank"
+          >
             <svg
               class="w-12 h-12 fill-current"
               height="100%"
