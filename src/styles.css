@@ -30,9 +30,4 @@ body {
   color: var(--secondary)
 }
 
-/* Hero */
-.code-container {
-  border-color: var(--tertiary);
-}
-
 
