@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <section class="hero flex min-w-0 border-2 p-6 border-red-700">
+    <section class="hero flex min-w-0 p-6">
       <!-- Left: 50% -->
       <div class=" w-1/2 p-6">
         <h1 class="text-4xl font-bold">
@@ -18,8 +18,13 @@ import { Component } from '@angular/core';
       </div>
       <!-- Right: 50% -->
       <div class="w-1/2">
-        <div class="code-container mx-auto border-1 w-4/5">
-          <div class="code-navbar">
+        <div class="code-container mx-auto w-4/5 bg-[var(--bg)] rounded">
+          <div class="code-navbar border-b-2 p-3 flex gap-1.5">
+            <div class="w-3 h-3 rounded-full bg-[var(--primary)]"></div>
+            <div class="w-3 h-3 rounded-full bg-[var(--secondary)]"></div>
+            <div class="w-3 h-3 rounded-full bg-[var(--tertiary)]"></div>
+          </div>
+          <div class="code-content border-box">
             <pre ngNonBindable>
                   <code>
                   const currentStudent = &#123;
@@ -33,6 +38,14 @@ import { Component } from '@angular/core';
       </div>
     </section>
   `,
-  styles: ``,
+  styles: `
+    .code-container {
+      border: 4px solid transparent;
+      border-radius: 1rem;
+      background:
+        var(--bg-dark) padding-box,
+        var(--border-gradient) border-box;
+    }
+  `,
 })
 export class HomeComponent {}
