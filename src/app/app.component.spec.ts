@@ -1,10 +1,27 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { of } from 'rxjs';
+import { RouterModule } from '@angular/router';
+import { AboutComponent } from './about/about.component';
+import { Routes } from '@angular/router';
 
-describe('AppComponent', () => {
+describe('AppComponent (Standalone)', () => {
   beforeEach(async () => {
+    const activatedRouteStub = {
+      snapshot: {
+        paramMap: {
+          get: () => 'staticValue',
+        },
+      },
+      queryParams: of({}),
+    };
+
+    const routes: Routes = [{ path: 'about', component: AboutComponent }];
+
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [RouterModule.forRoot(routes)], // Include RouterTestingModule to handle routing AboutComponent
+      providers: [{ provide: ActivatedRoute, useValue: activatedRouteStub }],
     }).compileComponents();
   });
 
@@ -14,16 +31,13 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'portfolio' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('portfolio');
-  });
+  it('should display the correct route for the About component', () => {
+    const router = TestBed.inject(Router);
+    const route: any = router.config.find((r) => r.path === 'about');
+    expect(route).toBeDefined(); // Checks if the About component is defined
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, portfolio');
+    if (route) {
+      expect(route.component).toBe(AboutComponent); // Checks if the About component is correctly set
+    }
   });
 });

@@ -16,7 +16,7 @@ import p5 from 'p5';
     class="fixed inset-0 z-[-1] pointer-events-none"
   ></div>`,
 })
-export class BackgroundP5Component implements AfterViewInit {
+export class GridTrailBackgroundComponent implements AfterViewInit {
   @ViewChild('host', { static: true }) hostRef!: ElementRef<HTMLDivElement>;
   private p?: p5;
 
@@ -27,7 +27,7 @@ export class BackgroundP5Component implements AfterViewInit {
   private readonly color_b = 233;
   private readonly starting_alpha = 255;
   private readonly background_color = 31;
-  private readonly prob_of_neighbor = 0.5;
+  private readonly prob_of_neighbor = 0.2;
   private readonly amt_fade_per_frame = 5;
   private readonly stroke_weight = 1;
 
