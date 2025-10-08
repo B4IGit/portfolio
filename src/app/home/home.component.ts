@@ -1,13 +1,14 @@
 import 'tailwindcss';
 import { Component } from '@angular/core';
+import { SkillsComponent } from '../skills/skills.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [SkillsComponent],
   template: `
     <!-- Hero -->
-    <section>
+    <section class="min-h-screen relative">
       <div class="container flex flex-col md:flex-row min-w-0 md:p-6 gap-6">
         <!-- Left: 50% -->
         <div class="w-full sm:p-2 md:w-1/2 p-6">
@@ -150,6 +151,16 @@ import { Component } from '@angular/core';
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="h-[300px]">
+      <div>
+        <h3 class="w-full py-3 text-2xl bg-[var(--bg)] text-[var(--primary)]">
+          Skills
+        </h3>
+        <app-skills></app-skills>
       </div>
     </section>
   `,
