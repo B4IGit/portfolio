@@ -7,7 +7,7 @@ import 'tailwindcss';
   imports: [],
   template: `<!-- Education -->
     <section class="">
-      <div class="wrapper flex flex-row">
+      <div class="wrapper flex flex-col md:flex-row min-w-0 md:p-6 gap-6">
         <div class="w-full md:w-1/2 justify-center items-center">
           <h3 class="w-full py-3 text-2xl bg-[var(--bg)] text-[var(--primary)]">
             Education
