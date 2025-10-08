@@ -1,21 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { GridTrailBackgroundComponent } from './grid-trail-background/grid-trail-background.component';
-import { AboutComponent } from './about/about.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    RouterLink,
-    GridTrailBackgroundComponent,
-    AboutComponent,
-  ],
+  imports: [RouterOutlet, RouterLink, GridTrailBackgroundComponent],
   template: `
-    <div class="container mx-auto min-h-screen z-[-2] bg-[var(--bg)]">
+    <div class="container border-box mx-auto z-[-2]] relative overflow-hidden">
       <!-- p5 canvas (z -1) -->
-      <app-grid-trail-background></app-grid-trail-background>
+      <app-grid-trail-background class="z-[-1]"></app-grid-trail-background>
 
       <header></header>
 
@@ -36,7 +30,6 @@ import { AboutComponent } from './about/about.component';
 
         <section class="content">
           <router-outlet />
-          <app-about></app-about>
         </section>
 
         <footer
