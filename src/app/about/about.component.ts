@@ -4,15 +4,17 @@ import { Component } from '@angular/core';
   selector: 'app-about',
   standalone: true,
   imports: [],
-  template: ` <section class="h-screen flex items-center">
+  template: ` <section class="flex items-center min-h-screen">
     <div class="w-full p-2">
       <!-- Full-width heading -->
-      <h3 class="w-full py-3 text-2xl text-[var(--primary)]">About Me</h3>
+      <h3 class="w-full py-3 text-2xl bg-[var(--bg)] text-[var(--primary)]">
+        About Me
+      </h3>
 
       <!-- Flex container for content -->
       <div class="md:flex md:gap-6">
         <!-- Text section -->
-        <div class="md:basis-1/2 text-lg">
+        <div class="bg-[var(--bg)] md:basis-1/2 text-lg p-3">
           <p>
             I'm a passionate Web Developer based in Iowa, currently immersed in
             studying Web Development. Alongside my coursework, I juggle two jobs
