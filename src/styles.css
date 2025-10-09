@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-/* Define colors */
 @theme {
+  /* Define colors */
   --bg: #1F1F1F;
   --text: #f9fdf9;
   --text-dark: #dcd1e6;
@@ -15,10 +15,8 @@
     var(--primary),
     var(--tertiary)
   );
-  --bg-dark: linear-gradient(var(--bg), var(--black));
-}
 
-@theme code {
+  /* Define syntax highlighting colors */
   --const: #fa02d7;
   --string: #fad404;
   --skill: #c6f802;
@@ -35,17 +33,6 @@ body {
   overflow-x: hidden;
 }
 
-::ng-deep .mat-progress-bar {
-  display: none !important;
-}
-
 pre:has(code) {
   white-space: pre-line;
 }
-
-/* Navbar */
-.nav-logo {
-  color: var(--secondary)
-}
-
-
