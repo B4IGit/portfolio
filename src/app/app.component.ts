@@ -1,54 +1,123 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { GridTrailBackgroundComponent } from './grid-trail-background/grid-trail-background.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, GridTrailBackgroundComponent],
-  template: `
-    <div class="container border-box mx-auto z-[-2]] relative overflow-hidden">
-      <!-- p5 canvas (z -1) -->
-      <app-grid-trail-background class="z-[-1]"></app-grid-trail-background>
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    CommonModule,
+    GridTrailBackgroundComponent,
+  ],
+  template: ` <div
+    class="container max-w-[1200px] mx-auto p-4 relative overflow-hidden"
+  >
+    <!-- P5.js canvas -->
+    <app-grid-trail-background class="z-[-1]"></app-grid-trail-background>
 
-      <header></header>
-
-      <main class="w-full p-2 md:w-4/5 mx-auto">
-        <nav class="flex justify-between h-20 items-center bg-[var(--bg)]">
-          <!-- Logo -->
-          <div class="nav-logo uppercase text-2xl font-semibold p-2 list-none">
-            <li><a routerLink="/">Devin Ledesma</a></li>
-          </div>
-          <!-- Nav links -->
-          <div class="nav-links flex list-none gap-6 px-6 py-2">
-            <li><a routerLink="/about">About</a></li>
-            <li><a routerLink="#">Projects</a></li>
-            <li><a routerLink="#">Resume</a></li>
-            <li><a routerLink="#">Contact?</a></li>
-          </div>
-        </nav>
-
-        <section class="content">
-          <router-outlet />
-        </section>
-
-        <footer
-          class="flex flex-col items-center justify-center h-28 bg-[var(--bg)]"
+    <main class="z-1">
+      <nav class="flex items-center justify-between h-20 bg-[var(--bg)]">
+        <div
+          class="logo uppercase text-2xl font-semibold text-[var(--secondary)] cursor-pointer"
         >
-          <nav class="flex gap-6 mb-5">
-            <a routerLink="/">Home</a>
-            <a routerLink="/about">About</a>
-            <a routerLink="#">Projects</a>
-            <a routerLink="#">Resume</a>
-            <a routerLink="#">Contact?</a>
-          </nav>
-          <p>&copy; 2025 Portfolio</p>
-        </footer>
-      </main>
-    </div>
-  `,
-  styles: [],
+          <a routerLink="/">Devin Ledesma</a>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          (click)="toggleNavBar()"
+          class="md:hidden text-3xl text-white p-2 cursor-pointer z-[1000]"
+        >
+          {{ isMenuOpen ? '✕' : '☰' }}
+        </button>
+
+        <!-- Sidebar -->
+        <div
+          [class.translate-x-0]="isMenuOpen"
+          [class.translate-x-full]="!isMenuOpen"
+          class="sidebar-nav fixed top-0 right-0 h-screen w-[80%] bg-[var(--bg)] z-[999] md:hidden transition-transform duration-300 ease-in-out"
+        >
+          <div class="flex justify-end p-4">
+            <button
+              (click)="toggleNavBar()"
+              class="text-3xl text-white cursor-pointer"
+            ></button>
+          </div>
+          <ul
+            class="w-full text-center flex-col list-image-none p-2 text-[var(--text)]"
+          >
+            <li><a routerLink="/about" (click)="toggleNavBar()">About</a></li>
+            <li>
+              <a routerLink="/projects" (click)="toggleNavBar()">Projects</a>
+            </li>
+            <li><a routerLink="/resume" (click)="toggleNavBar()">Resume</a></li>
+            <li>
+              <a routerLink="/contact" (click)="toggleNavBar()">Contact?</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Overlay -->
+        <div
+          *ngIf="isMenuOpen"
+          (click)="toggleNavBar()"
+          class="fixed inset-0 bg-[var(--bg)] bg-opacity-50 z-[998] md:hidden"
+        ></div>
+
+        <!-- Main menu -->
+        <div class="hidden md:block">
+          <ul class="flex list-image-none gap-10 text-[var(--text)]">
+            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/projects">Projects</a></li>
+            <li><a routerLink="/resume">Resume</a></li>
+            <li><a routerLink="/contact">Contact?</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="content">
+        <router-outlet />
+      </section>
+    </main>
+
+    <footer
+      class="flex flex-col items-center justify-center h-28 bg-[var(--bg)]"
+    >
+      <nav class="flex gap-6 mb-5">
+        <a routerLink="/">Home</a>
+        <a routerLink="/about">About</a>
+        <a routerLink="#">Projects</a>
+        <a routerLink="#">Resume</a>
+        <a routerLink="#">Contact?</a>
+      </nav>
+      <p>&copy; 2025 Portfolio</p>
+    </footer>
+  </div>`,
+  styles: [
+    `
+      /* Sidebar */
+      nav .sidebar-nav li {
+        padding: 1em 0;
+        border-bottom: 2px solid var(--primary);
+        width: 100%;
+      }
+      /* Sidebar-nav links */
+      nav .sidebar-nav a {
+        display: block;
+        font-size: 1.25rem;
+      }
+    `,
+  ],
 })
 export class AppComponent {
   title = 'portfolio';
+
+  isMenuOpen = false;
+
+  toggleNavBar() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
