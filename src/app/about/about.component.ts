@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
   template: ` <section class="flex items-center min-h-screen">
     <div class="w-full p-2">
       <!-- Full-width heading -->
-      <h3 class="w-full py-3 text-2xl bg-[var(--bg)] text-[var(--primary)]">
-        About Me
-      </h3>
 
       <!-- Flex container for content -->
       <div class="md:flex md:gap-6">
+        <h3 class="w-full py-3 text-2xl bg-[var(--bg)] text-[var(--primary)]">
+          About Me
+        </h3>
         <!-- Text section -->
         <div class="bg-[var(--bg)] md:basis-1/2 text-lg p-3">
           <p>
