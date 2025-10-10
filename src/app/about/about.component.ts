@@ -179,15 +179,21 @@ import { Component } from '@angular/core';
     }
 
     .project-card h3 {
-      color: var(--primary);
+      color: var(--text);
       font-size: 1.25rem;
-      padding-bottom: 0.8rem;
+      padding: 0.8rem 0;
     }
 
     .project-card h2 {
       color: var(--secondary);
       font-size: 0.8rem;
       padding-bottom: 0.5rem;
+      margin-left: 0.5rem;
+    }
+
+    .project-card p {
+      color: var(--text-dark);
+      margin-left: 0.5rem;
     }
   `,
 })
