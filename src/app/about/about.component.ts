@@ -48,7 +48,7 @@ import { Component } from '@angular/core';
     </div>
     <div>
       <img
-        src="/assets/portfolio_headshot_2025.png"
+        src="/portfolio/assets/portfolio_headshot_2025.png"
         alt="image of myself"
         class="rounded-2xl"
       />
@@ -60,7 +60,7 @@ import { Component } from '@angular/core';
       <!-- Grid item 1 -->
       <div>
         <img
-          src="/assets/626.png"
+          src="/portfolio/assets/626.png"
           alt="Illustrator artwork"
           class="w-full object-cover rounded-md"
         />
@@ -74,7 +74,7 @@ import { Component } from '@angular/core';
       <!-- Grid item 2 -->
       <div>
         <img
-          src="/assets/LEDESMA_DEVIN_APPLE-TART_Page_2.png"
+          src="/portfolio/assets/LEDESMA_DEVIN_APPLE-TART_Page_2.png"
           alt="Illustrator artwork"
           class="w-full object-cover rounded-md"
         />
@@ -88,7 +88,7 @@ import { Component } from '@angular/core';
       <!-- Grid item 3 -->
       <div>
         <img
-          src="/assets/LEDESMA_DEVIN_APPLE-TART_Page_3.png"
+          src="/portfolio/assets/LEDESMA_DEVIN_APPLE-TART_Page_3.png"
           alt="Illustrator artwork"
           class="w-full object-cover rounded-md"
         />
@@ -103,7 +103,7 @@ import { Component } from '@angular/core';
       <!-- Grid item 4 -->
       <div>
         <img
-          src="/assets/LEDESMA_DEVIN_Movie_Poster_Textured.png"
+          src="/portfolio/assets/LEDESMA_DEVIN_Movie_Poster_Textured.png"
           alt="Illustrator artwork"
           class="w-full object-cover rounded-md"
         />
@@ -119,7 +119,7 @@ import { Component } from '@angular/core';
       <!-- Grid item 5 -->
       <div>
         <img
-          src="/assets/LEDESMA_PLfinals_Page_2.png"
+          src="/portfolio/assets/LEDESMA_PLfinals_Page_2.png"
           alt="Illustrator artwork"
           class="w-full object-cover rounded-md"
         />
@@ -134,7 +134,7 @@ import { Component } from '@angular/core';
       <!-- Grid item 6 -->
       <div>
         <img
-          src="/assets/LEDESMA_lyrical-layouts.png"
+          src="/portfolio/assets/LEDESMA_lyrical-layouts.png"
           alt="Illustrator artwork"
           class="w-full object-cover rounded-md"
         />
@@ -150,7 +150,7 @@ import { Component } from '@angular/core';
       <!-- Grid item 7 -->
       <div>
         <img
-          src="/assets/LEDESMA_book-cover.png"
+          src="/portfolio/assets/LEDESMA_book-cover.png"
           alt="Illustrator artwork"
           class="w-full object-cover rounded-md"
         />
