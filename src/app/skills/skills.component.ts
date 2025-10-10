@@ -9,7 +9,7 @@ import 'tailwindcss';
     <h3 class="text-2xl bg-[var(--bg)] text-[var(--primary)] md:mt-24">
       &lt;!&ndash; Skills &ndash;&gt;
     </h3>
-    <div class="scroll-container border-box hidden md:block">
+    <div class="scroll-container relative h-[250px] border-box hidden md:block">
       <div class="carousel-primary w-full flex justify-center items-center">
         <!-- Angular -->
         <div class="wrapper">
