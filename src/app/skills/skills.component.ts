@@ -6,7 +6,10 @@ import 'tailwindcss';
   standalone: true,
   imports: [],
   template: `
-    <div class="scroll-container border-box">
+    <h3 class="text-2xl bg-[var(--bg)] text-[var(--primary)] md:mt-24">
+      &lt;!&ndash; Skills &ndash;&gt;
+    </h3>
+    <div class="scroll-container border-box hidden md:block">
       <div class="carousel-primary w-full flex justify-center items-center">
         <!-- Angular -->
         <div class="wrapper">
@@ -270,6 +273,20 @@ import 'tailwindcss';
     </div>
   `,
   styles: `
+    .mobile-wrapper {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .mobile-wrapper svg {
+      width: 80px;
+      height: auto;
+      border-radius: 14px;
+      display: inline-block;
+    }
+
     .wrapper {
       padding: 2rem;
       background: linear-gradient(135deg, #f0f4ff, #e0e7ff);
@@ -304,12 +321,12 @@ import 'tailwindcss';
     .carousel-primary {
       display: flex;
       justify-content: space-around;
-      animation: scroll-horizontal 20s linear infinite;
+      animation: scroll-horizontal 25s linear infinite;
     }
 
     .carousel-secondary {
-      animation: scroll-horizontal 20s linear infinite;
-      animation-delay: 10s;
+      animation: scroll-horizontal 25s linear infinite;
+      animation-delay: 12.5s;
     }
 
     @keyframes scroll-horizontal {
@@ -353,28 +370,6 @@ import 'tailwindcss';
       transform: scale(1.1) rotate(-2deg); /* subtle zoom and tilt */
       transition: all 0.3s ease;
       padding: 1rem;
-    }
-
-    @media (max-width: 768px) {
-      .wrapper {
-        padding: 1rem;
-        border-radius: 0.5rem;
-      }
-
-      .carousel-primary,
-      .carousel-secondary {
-        padding: 1rem 0;
-      }
-
-      .carousel-primary svg {
-        width: 60px;
-        padding: 0.5rem;
-      }
-
-      .carousel-primary {
-        justify-content: flex-start;
-        gap: 1rem;
-      }
     }
   `,
 })
