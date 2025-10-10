@@ -12,7 +12,10 @@ import 'tailwindcss';
           <h3 class="w-full py-3 text-2xl bg-[var(--bg)] text-[var(--primary)]">
             &lt;!&ndash; Education &ndash;&gt;
           </h3>
-          <img src="/assets/undraw_deep-work_muov.svg" alt="deep work" />
+          <img
+            src="/portfolio/assets/undraw_deep-work_muov.svg"
+            alt="deep work"
+          />
         </div>
 
         <!-- Right side -->
