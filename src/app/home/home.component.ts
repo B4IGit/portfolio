@@ -149,7 +149,9 @@ import { EducationComponent } from '../education/education.component';
         </div>
       </div>
 
-      <div class="relative h-auto py-8 md:col-span-2">
+      <div
+        class="relative h-auto py-8 md:col-span-2 flex justify-center items-center"
+      >
         <app-skills></app-skills>
       </div>
 
