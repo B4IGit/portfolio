@@ -20,7 +20,7 @@ import 'tailwindcss';
       </div>
 
       <!-- Right side -->
-      <div class="space-y-6 md:space-y-8">
+      <div class="space-y-6 md:space-y-8 mb-4">
         <!-- Education Card 1 -->
         <div
           class="grid grid-rows-[auto,1fr,auto] mb-12 py-4 card-wrapper w-full max-w-md bg-[var(--bg)] shadow-lg rounded-lg p-6 text-center md:text-left"
