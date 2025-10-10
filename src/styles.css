@@ -15,6 +15,7 @@
     var(--primary),
     var(--tertiary)
   );
+  --bg-dark: linear-gradient(var(--bg), var(--black));
 
   /* Define syntax highlighting colors */
   --const: #fa02d7;
