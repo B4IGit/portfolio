@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { GridTrailBackgroundComponent } from './grid-trail-background/grid-trail-background.component';
@@ -13,13 +13,17 @@ import { GridTrailBackgroundComponent } from './grid-trail-background/grid-trail
     GridTrailBackgroundComponent,
   ],
   template: ` <div
-    class="container max-w-[1200px] mx-auto p-4 relative overflow-hidden"
+    class="container max-w-[1200px] mx-auto px-4 relative overflow-hidden w-full"
   >
     <!-- P5.js canvas -->
-    <app-grid-trail-background class="z-[-1]"></app-grid-trail-background>
+    <app-grid-trail-background
+      class="absolute inset-0 z-[-1] overflow-hidden"
+    ></app-grid-trail-background>
 
     <main class="z-1">
-      <nav class="flex items-center justify-between h-20 bg-[var(--bg)]">
+      <nav
+        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between h-20 px-2 bg-[var(--bg)] shadow-md"
+      >
         <div
           class="logo uppercase text-2xl font-semibold text-[var(--secondary)] cursor-pointer"
         >
@@ -78,7 +82,7 @@ import { GridTrailBackgroundComponent } from './grid-trail-background/grid-trail
         </div>
       </nav>
 
-      <section class="content">
+      <section class="min-h-screen pt-20">
         <router-outlet />
       </section>
     </main>
