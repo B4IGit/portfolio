@@ -149,7 +149,7 @@ import { EducationComponent } from '../education/education.component';
         </div>
       </div>
 
-      <div class="relative h-[250px] md:col-span-2">
+      <div class="relative h-[450px] md:col-span-2">
         <app-skills></app-skills>
       </div>
 
