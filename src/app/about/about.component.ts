@@ -49,7 +49,7 @@ import { Component } from '@angular/core';
     <div>
       <img
         src="/portfolio/assets/portfolio_headshot_2025.png"
-        alt="image of myself"
+        alt="Headshot of myself"
         class="rounded-2xl"
       />
     </div>
