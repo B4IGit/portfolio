@@ -23,7 +23,7 @@ import 'tailwindcss';
       <div class="space-y-6 md:space-y-8">
         <!-- Education Card 1 -->
         <div
-          class="grid grid-rows-[auto,1fr,auto] py-4 card-wrapper w-full max-w-md bg-[var(--bg)] shadow-lg rounded-lg p-6 text-center md:text-left"
+          class="grid grid-rows-[auto,1fr,auto] mb-12 py-4 card-wrapper w-full max-w-md bg-[var(--bg)] shadow-lg rounded-lg p-6 text-center md:text-left"
         >
           <p class="text-[var(--primary)] pb-4 md:text-left">2025 - 2026</p>
           <h3 class="text-xl font-semibold pb-2 text-[var(--secondary)]">
