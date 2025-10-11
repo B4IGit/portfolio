@@ -77,7 +77,7 @@ import { GridTrailBackgroundComponent } from './grid-trail-background/grid-trail
             <li><a routerLink="/about">About</a></li>
             <li><a routerLink="/projects">Projects</a></li>
             <li><a routerLink="/resume">Resume</a></li>
-            <li><a routerLink="/contact">Contact?</a></li>
+            <li><a routerLink="/fake-link">Contact?</a></li>
           </ul>
         </div>
       </nav>
@@ -93,9 +93,9 @@ import { GridTrailBackgroundComponent } from './grid-trail-background/grid-trail
       <nav class="flex gap-6 mb-5">
         <a routerLink="/">Home</a>
         <a routerLink="/about">About</a>
-        <a routerLink="#">Projects</a>
-        <a routerLink="#">Resume</a>
-        <a routerLink="#">Contact?</a>
+        <a routerLink="/projects">Projects</a>
+        <a routerLink="/resume">Resume</a>
+        <a routerLink="/fake-link">Contact?</a>
       </nav>
       <p>&copy; 2025 Portfolio</p>
     </footer>
