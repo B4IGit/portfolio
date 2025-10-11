@@ -2,11 +2,12 @@ import 'tailwindcss';
 import { Component } from '@angular/core';
 import { SkillsComponent } from '../skills/skills.component';
 import { EducationComponent } from '../education/education.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [SkillsComponent, EducationComponent],
+  imports: [SkillsComponent, EducationComponent, RouterLink],
   template: `
     <!-- Hero Section -->
     <section
@@ -68,6 +69,7 @@ import { EducationComponent } from '../education/education.component';
         <div class="buttons flex flex-col w-full h-auto gap-6 md:flex-row">
           <button
             class="flex items-center gap-3 border-2 py-3 px-10 rounded-md bg-[var(--bg)] cursor-pointer"
+            [routerLink]="['/projects']"
           >
             <svg
               height="8.4666mm"
@@ -87,10 +89,11 @@ import { EducationComponent } from '../education/education.component';
                 />
               </g>
             </svg>
-            Contact
+            Projects
           </button>
           <button
             class="flex items-center gap-3 border-2 py-3 px-10 rounded-md bg-[var(--bg)] cursor-pointer"
+            [routerLink]="['/resume']"
           >
             <svg
               height="8.4666mm"
