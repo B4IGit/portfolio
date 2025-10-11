@@ -55,7 +55,7 @@ import { Component } from '@angular/core';
     </div>
 
     <div
-      class="project-card gap-4 space-y-10 md:col-span-2 md:grid md:grid-cols-3"
+      class="project-card flex flex-col space-y-6 md:grid md:grid-cols-3 md:gap-6"
     >
       <!-- Grid item 1 -->
       <div>
