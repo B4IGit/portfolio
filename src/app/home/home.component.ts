@@ -153,6 +153,24 @@ import { EducationComponent } from '../education/education.component';
 
       <div class="relative h-[400px] py-8 md:col-span-2">
         <app-skills></app-skills>
+        <div class="mt-12 md:col-span-2 md:hidden">
+          <div
+            class="skill-icons flex flex-wrap items-center justify-center gap-4"
+          >
+            <span>Angular</span>
+            <span>HTML 5</span>
+            <span>CSS 3</span>
+            <span>Tailwind</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+            <span>MySQL</span>
+            <span>Next.js</span>
+            <span>NPM</span>
+            <span>TypeScript</span>
+          </div>
+        </div>
       </div>
 
       <div class="relative md:col-span-2">
@@ -180,6 +198,14 @@ import { EducationComponent } from '../education/education.component';
 
     .buttons svg {
       fill: var(--secondary);
+    }
+    .skill-icons span {
+      padding: 0.5rem 1rem;
+      background-color: var(--tertiary);
+      color: var(--bg);
+      border-radius: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
     }
   `,
 })
