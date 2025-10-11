@@ -137,14 +137,15 @@ interface Project {
 
     @media (max-width: 768px) {
       .project-card {
-        height: 350px;
-        overflow-y: auto;
-        padding-right: 0.5rem;
-        scrollbar-width: thin;
+        max-height: 350px;
+        position: relative;
       }
 
       .project-info {
-        padding: 1.5rem;
+        max-height: 350px;
+        overflow-y: auto;
+        padding: 1rem;
+        scrollbar-width: thin;
       }
 
       .project-info h3 {
