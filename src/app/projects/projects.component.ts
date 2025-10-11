@@ -7,6 +7,7 @@ interface Project {
   technologies: string[];
   description: string;
   image: string;
+  url?: string;
 }
 
 @Component({
@@ -22,11 +23,11 @@ interface Project {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
         <div
           *ngFor="let project of projects"
-          class="project-card relative overflow-hidden rounded-lg border-[var(--primary)] border-2  transition-all duration-300 h-[400px]"
+          class="project-card relative overflow-hidden rounded-lg border-[var(--primary)] border-2  transition-all duration-300 h-[400px] overflow-y-auto"
         >
           <!-- Image Container -->
           <div
-            class="image-container absolute inset-0 ml-[20%] overflow-hidden"
+            class="image-container absolute inset-0 ml-[10%] overflow-hidden"
           >
             <img
               [src]="project.image"
@@ -37,12 +38,12 @@ interface Project {
 
           <!-- Project Info (Visible on hover) -->
           <div
-            class="project-info absolute bottom-0 left-0 right-0 bg-[var(--bg)] p-6 transform translate-y-0 transition-all duration-500"
+            class="project-info absolute bottom-0 left-0 right-0 bg-[var(--bg)] p-2 transform translate-y-0 transition-all duration-500"
           >
             <div class="flex">
               <!-- Left Column: Arrow Icon -->
               <div
-                class="w-1/5 flex items-center justify-center text-4xl text-[var(--secondary)]"
+                class="md:w-[10%] p-4 flex items-center justify-center text-4xl text-[var(--secondary)]"
               >
                 <svg
                   class="w-6 h-6 text-[var(--text)]"
@@ -77,6 +78,29 @@ interface Project {
                 <p class="text-sm text-[var(--text)] leading-relaxed">
                   {{ project.description }}
                 </p>
+
+                <a
+                  *ngIf="project.url"
+                  [href]="project.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 px-4 py-2 bg-[var(--primary)] text-[var(--bg)] rounded-md hover:bg-[var(--secondary)] transition-colors duration-300 text-sm font-semibold"
+                >
+                  Visit Website
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -96,6 +120,7 @@ interface Project {
 
     .project-card:hover .project-info {
       transform: translateX(0);
+      z-index: 15;
     }
 
     .image-container {
@@ -106,9 +131,16 @@ interface Project {
       z-index: 5;
     }
 
+    a {
+      margin: 1rem 0;
+    }
+
     @media (max-width: 768px) {
       .project-card {
         height: 350px;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+        scrollbar-width: thin;
       }
 
       .project-info {
@@ -121,6 +153,7 @@ interface Project {
 
       .project-info p {
         font-size: 0.813rem;
+        margin-bottom: 1rem;
       }
     }
   `,
@@ -130,34 +163,18 @@ export class ProjectsComponent {
     {
       id: 1,
       name: 'Devin Ledesma',
-      technologies: ['Angular', 'TypeScript', 'Tailwind CSS', 'P5.js'],
+      technologies: ['Angular', 'TypeScript'],
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet enim harum illo impedit iure natus nulla rem repellendus totam voluptates.',
+        'This project built upon our understanding of the fundamental of Angular, including Layouts, Routing + Action, Error Handling & Unit Testing, Template Syntax, Template-Drive & Reactive & Complex Forms + TDD, HttpClient, and Deployment. It also provided a solid foundation for future projects.',
       image: 'assets/rpg-character-project.png',
+      url: 'https://b4igit.github.io/web-425/',
     },
     {
       id: 2,
-      name: 'Devin Ledesma',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet enim harum illo impedit iure natus nulla rem repellendus totam voluptates.',
-      image: '',
-    },
-    {
-      id: 3,
-      name: 'Devin Ledesma',
-      technologies: ['Angular', 'Firebase', 'Material UI', 'RxJS'],
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet enim harum illo impedit iure natus nulla rem repellendus totam voluptates.',
-      image: '',
-    },
-    {
-      id: 4,
-      name: 'Devin Ledesma',
-      technologies: ['JavaScript', 'HTML5', 'CSS3'],
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet enim harum illo impedit iure natus nulla rem repellendus totam voluptates.',
-      image: '',
+      name: 'WORKING ON IT!',
+      technologies: ['In-Progress'],
+      description: 'Please come back soon.',
+      image: 'assets/coming_soon.jpg',
     },
   ];
 }
