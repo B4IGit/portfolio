@@ -28,10 +28,6 @@ export const routes: Routes = [
     component: ResumeComponent,
   },
   {
-    path: 'contact',
-    component: ContactComponent,
-  },
-  {
     path: '**',
     component: PageNotFoundComponent,
   },
