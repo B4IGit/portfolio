@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   >
     <div class="bg-[var(--bg)]">
       <h3 class="text-2xl text-[var(--primary)] pb-4 md:pb-8">
-        &lt;!&ndash; About Me &ndash;&gt;
+        &lt;!&ndash; About &ndash;&gt;
       </h3>
       <div class="text-[var(--text-dark)] text-lg">
         <p>
