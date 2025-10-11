@@ -22,7 +22,9 @@ import { EducationComponent } from '../education/education.component';
         </h1>
         <!-- Social links -->
         <div class="flex items-center justify-center my-20 md:justify-start">
-          <div class="social-links flex flex-wrap gap-16 p-4 bg-[var(--bg)]">
+          <div
+            class="social-links flex flex-wrap gap-32 md:gap-16 p-4 bg-[var(--bg)]"
+          >
             <div>
               <a href="https://github.com/b4igit" target="_blank">
                 <svg
