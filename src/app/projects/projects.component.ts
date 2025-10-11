@@ -75,7 +75,7 @@ interface Project {
                   </span>
                 </div>
 
-                <p class="text-sm text-[var(--text)] leading-relaxed">
+                <p class="text-md text-[var(--text)] leading-relaxed">
                   {{ project.description }}
                 </p>
 
@@ -165,7 +165,7 @@ export class ProjectsComponent {
       name: 'Devin Ledesma',
       technologies: ['Angular', 'TypeScript'],
       description:
-        'This project built upon our understanding of the fundamental of Angular, including Layouts, Routing + Action, Error Handling & Unit Testing, Template Syntax, Template-Drive & Reactive & Complex Forms + TDD, HttpClient, and Deployment. It also provided a solid foundation for future projects.',
+        "This project strengthened my understanding of the core principles of Angular. It covered essential topics such as layouts, routing and actions, error handling, and unit testing. I also gained experience with template syntax, both template-driven and reactive forms, as well as complex form handling using test-driven development (TDD). Additionally, I worked with Angular's HttpClient and learned how to deploy applications effectively.",
       image: 'assets/rpg-character-project.png',
       url: 'https://b4igit.github.io/web-425/',
     },
