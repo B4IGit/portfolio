@@ -54,6 +54,9 @@ import { Component } from '@angular/core';
       />
     </div>
 
+    <h2 class="text-xl text-[var(--primary)] md:mt-4">
+      &lt;!&ndash; Design Projects &ndash;&gt;
+    </h2>
     <div class="project-card gap-4 md:col-span-2 md:grid md:grid-cols-3">
       <!-- Grid item 1 -->
       <div>
