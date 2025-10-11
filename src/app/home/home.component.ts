@@ -151,7 +151,7 @@ import { EducationComponent } from '../education/education.component';
         </div>
       </div>
 
-      <div class="relative h-[400px] py-8 md:col-span-2">
+      <div class="relative h-auto md:h-[400px] py-8 md:col-span-2">
         <app-skills></app-skills>
         <div class="mt-12 md:col-span-2 md:hidden">
           <div
