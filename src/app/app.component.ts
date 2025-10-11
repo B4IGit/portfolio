@@ -59,7 +59,7 @@ import { GridTrailBackgroundComponent } from './grid-trail-background/grid-trail
             </li>
             <li><a routerLink="/resume" (click)="toggleNavBar()">Resume</a></li>
             <li>
-              <a routerLink="/contact" (click)="toggleNavBar()">Contact?</a>
+              <a routerLink="/fake-link" (click)="toggleNavBar()">Contact?</a>
             </li>
           </ul>
         </div>
